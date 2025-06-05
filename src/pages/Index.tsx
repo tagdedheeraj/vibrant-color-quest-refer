@@ -7,12 +7,13 @@ import { Gamepad2, Gift, Brain, Trophy, Coins } from "lucide-react";
 import ColorPrediction from "@/components/ColorPrediction";
 import Quiz from "@/components/Quiz";
 import ReferAndEarn from "@/components/ReferAndEarn";
+import BottomBar from "@/components/BottomBar";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("predict");
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 pb-20">
       {/* Header */}
       <div className="bg-black/20 backdrop-blur-sm border-b border-white/10">
         <div className="container mx-auto px-4 py-4">
@@ -88,6 +89,9 @@ const Index = () => {
           </div>
         </Tabs>
       </div>
+
+      {/* Bottom Navigation Bar */}
+      <BottomBar activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
   );
 };
